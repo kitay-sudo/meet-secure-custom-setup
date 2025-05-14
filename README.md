@@ -24,9 +24,11 @@ mkdir -p ~/.jitsi-meet-cfg/{web,transcripts,prosody/config,prosody/prosody-plugi
 
 📝 3. Настройка .env
 
+```bash
 PUBLIC_URL=meet.example.com
 HTTP_PORT=8000
 HTTPS_PORT=8443
+```
 
 🌐 4. Конфигурация NGINX
 
@@ -120,13 +122,17 @@ server {
 
 🔐 5. Получение сертификата
 
+```bash
 sudo apt install python3-pip -y
 pip3 install certbot-nginx
 sudo certbot certonly --standalone -d meet.example.com
+```
 
 🖌️ 6. Кастомизация интерфейса
 
+```bash
 /root/.jitsi-meet-cfg/web/custom-interface_config.js
+```
 
 ```bash
 interfaceConfig = interfaceConfig || {};
@@ -168,7 +174,9 @@ interfaceConfig.FEEDBACK_PERCENT = 0;
 interfaceConfig.TOOLBAR_ALWAYS_VISIBLE = true;
 ```
 
+```bash
 /root/.jitsi-meet-cfg/web/custom-config.js
+```
 
 ```bash
 config = config || {};
