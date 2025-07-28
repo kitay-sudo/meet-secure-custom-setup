@@ -1,7 +1,0 @@
-#hangupButton > .toolbox-icon {
-    background-color: #b78bf7 !important;
-    border-radius: 50% !important;
-}
-#hangupButton:hover > .toolbox-icon {
-    background-color: #7569f0 !important;
-}
