@@ -6,16 +6,9 @@ interfaceConfig.SHOW_JITSI_WATERMARK = false;
 interfaceConfig.SHOW_BRAND_WATERMARK = false;
 interfaceConfig.SHOW_POWERED_BY = false;
 interfaceConfig.SHOW_WATERMARK_FOR_GUESTS = false;
-
-// ВАЖНО: Отключаем страницу приветствия и мобильные приложения
 interfaceConfig.ENABLE_WELCOME_PAGE = false;
-interfaceConfig.MOBILE_APP_PROMO = false;
 
-// Отключаем показ ссылок на мобильные приложения
-interfaceConfig.MOBILE_DOWNLOAD_LINK_ANDROID = '';
-interfaceConfig.MOBILE_DOWNLOAD_LINK_IOS = '';
-
-// Настройки тулбара
+// Убираем ненужные кнопки
 interfaceConfig.TOOLBAR_BUTTONS = [
     'microphone',
     'camera',
@@ -43,10 +36,10 @@ interfaceConfig.FEEDBACK_PERCENT = 0;
 // Меню всегда видно
 interfaceConfig.TOOLBAR_ALWAYS_VISIBLE = true;
 
-// Отключаем уведомления о мобильных приложениях
-interfaceConfig.ENFORCE_NOTIFICATION_AUTO_DISMISS_TIMEOUT = 0;
-interfaceConfig.NOTIFICATION_TIMEOUT = {
-    LONG: 0,
-    MEDIUM: 0,
-    SHORT: 0
-}; 
+// Отключаем диалоги подтверждения при выходе
+interfaceConfig.DISABLE_LEAVE_CONFIRMATION = true;
+interfaceConfig.HIDE_LEAVE_CONFERENCE_DIALOG = true;
+
+// Отключаем уведомления
+interfaceConfig.DISABLE_NOTIFICATIONS = true;
+interfaceConfig.DISABLE_JOIN_LEAVE_NOTIFICATIONS = true; 
