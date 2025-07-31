@@ -112,27 +112,12 @@ sudo python3 -m pip install --upgrade pip
 
 # Устанавливаем certbot и плагин для nginx
 sudo pip3 install certbot certbot-nginx
-
-# Или через виртуальное окружение (рекомендуется)
-python3 -m venv /opt/certbot/
-sudo /opt/certbot/bin/pip install --upgrade pip
-sudo /opt/certbot/bin/pip install certbot certbot-nginx
-
-# Создаем символическую ссылку для удобства
-sudo ln -s /opt/certbot/bin/certbot /usr/bin/certbot
 ```
 
 ### Получение SSL сертификата:
 
 ```bash
-# Создайте директорию для acme-challenge
-sudo mkdir -p /var/www/letsencrypt
-
-# Получите сертификат (замените на ваш домен)
-sudo certbot --nginx -d meet.mirracoin.io
-
-# Или только получить сертификат без автоконфигурации nginx
-sudo certbot certonly --webroot -w /var/www/letsencrypt -d meet.mirracoin.io
+sudo certbot certonly --standalone -d yourdomain.com
 ```
 
 ### Автообновление сертификатов:
@@ -146,13 +131,6 @@ sudo crontab -e
 ```
 
 ---
-
-## 🔧 Применение конфигурации
-
-### 1. Создайте символическую ссылку:
-```bash
-sudo ln -s /etc/nginx/sites-available/jitsi-meet /etc/nginx/sites-enabled/
-```
 
 ### 2. Проверьте конфигурацию:
 ```bash
